@@ -17,8 +17,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureMockMvc
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // RANDOM_PORT Allows to avoid conflict
+@AutoConfigureMockMvc   // To simulate a client call
 public class TzaControllerIntegrationTest {
     @LocalServerPort
     private int port;
